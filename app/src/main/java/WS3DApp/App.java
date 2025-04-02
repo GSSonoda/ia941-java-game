@@ -138,7 +138,7 @@ class UpdateCreature implements Runnable {
                         app.selectedCreature.move(50, 50, 0);
                         break;
                     case KeyEvent.VK_DOWN:
-                        app.selectedCreature.move(-50, -50, 0);
+                        app.selectedCreature.move(-10, -10, 0);
                         break;
                     case KeyEvent.VK_LEFT:
                         app.selectedCreature.rotate(5);
@@ -148,8 +148,7 @@ class UpdateCreature implements Runnable {
                         break;
                     }
                 }
-                Thread.sleep(10);
-                app.selectedCreature.move(0, 0, 0);       
+                Thread.sleep(100);    
             } catch (Exception e) {
                 System.out.println("MovementProcessor Error: " + e);
             }
