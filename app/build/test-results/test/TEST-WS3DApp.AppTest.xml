@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="WS3DApp.AppTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-03-26T10:35:56" hostname="gsonoda-nb2" time="12.651">
+  <properties/>
+  <testcase name="appHasAGreeting()" classname="WS3DApp.AppTest" time="12.651"/>
+  <system-out><![CDATA[Creature Creature_1 created with the ID 0 ...!
+Creature Creature_5 created with the ID 1 ...!
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
