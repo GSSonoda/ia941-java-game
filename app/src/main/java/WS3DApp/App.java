@@ -141,17 +141,19 @@ class UpdateCreature implements Runnable {
                         app.selectedCreature.move(-50, -50, 0);
                         break;
                     case KeyEvent.VK_LEFT:
-                        app.selectedCreature.rotate(-0.5);
+                        app.selectedCreature.rotate(5);
                         break;
                     case KeyEvent.VK_RIGHT:
-                        app.selectedCreature.rotate(0.5);
+                        app.selectedCreature.rotate(-5);
                         break;
                     }
                 }
-                Thread.sleep(100);
+                Thread.sleep(10);
+                app.selectedCreature.move(0, 0, 0);       
             } catch (Exception e) {
                 System.out.println("MovementProcessor Error: " + e);
-            }            
+            }
+   
         }
     }
 
@@ -159,8 +161,10 @@ class UpdateCreature implements Runnable {
         for (Thing thing : app.selectedCreature.getThingsInVision()) {
             try {
                 System.out.println("ThingsInVision: " + thing.getName());
-                app.selectedCreature.putInSack(thing.getName());
-                
+                if (thing.getName().startsWith("Brick")){
+                    continue;
+                }
+                app.selectedCreature.putInSack(thing.getName());        
             } catch (Exception e) {
                 e.printStackTrace();
             }            
